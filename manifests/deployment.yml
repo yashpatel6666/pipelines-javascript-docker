@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yashpatelpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yashpatelpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yashpatelpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yashpatelpipelinesjavascriptdocker 
+          image: myprocontainerregistry.azurecr.io/yashpatelpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
